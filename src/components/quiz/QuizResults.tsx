@@ -1,4 +1,3 @@
-// src/components/quiz/QuizResults.tsx
 import { motion } from "framer-motion";
 import { Button } from "../nano/Button";
 
@@ -20,7 +19,7 @@ export default function QuizResults({
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-center p-6 rounded-lg shadow-md bg-gray-800"
+      className="max-w-md mx-auto text-center p-6 md:p-8 rounded-lg shadow-md bg-gray-800 overflow-hidden"
     >
       {/* Ícone de Troféu */}
       <div className="flex justify-center mb-4">
@@ -39,7 +38,7 @@ export default function QuizResults({
         </svg>
       </div>
 
-      <h2 className="text-2xl font-bold mb-6 text-yellow-400">
+      <h2 className="text-2xl font-bold mb-6 text-yellow-400 break-words max-w-full">
         Congratulations!
       </h2>
 
@@ -52,10 +51,10 @@ export default function QuizResults({
 
       <p className="text-gray-300 mb-6">
         {percentage >= 80
-          ? "You're a financial systems expert!"
+          ? "You're a financial systems expert! 🚀"
           : percentage >= 60
-          ? "Good job! Keep up the good work."
-          : "Don't worry, keep practicing and you'll improve!"}
+          ? "Good job! Keep up the good work. 💪"
+          : "Don't worry, keep practicing and you'll improve! 🎯"}
       </p>
 
       <Button
