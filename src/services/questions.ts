@@ -649,84 +649,108 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 27 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 27 in ISO 8583 represent?",
+    options: [
       "Authorization Identification Response Length",
       "Transaction Amount",
       "Merchant Category Code",
       "Card Expiry Date"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 27 contains the Authorization Identification Response Length, indicating the length of the authorization identification response code. Used for formatted authorization responses. Transaction Amount is DE 4, MCC is DE 18, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 28 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 28 in ISO 8583 represent?",
+    options: [
       "Transaction Fee Amount",
       "Processing Code",
       "Response Code",
       "PAN Sequence Number"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 28 contains the Transaction Fee Amount, representing fees charged to the cardholder for the transaction (e.g., ATM fees, currency conversion fees). This is separate from the transaction amount. Processing Code is DE 3, Response Code is DE 39, PAN Sequence Number is DE 20.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 29 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 29 in ISO 8583 represent?",
+    options: [
       "Settlement Fee Amount",
       "Transaction Type",
       "Merchant ID",
       "Transaction Currency Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 29 contains the Settlement Fee Amount, representing fees associated with settlement processing. Used when fees are charged during settlement. Transaction Type is in DE 3, Merchant ID is DE 42, Currency Code is DE 49.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 30 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 30 in ISO 8583 represent?",
+    options: [
       "Transaction Processing Fee Amount",
       "Settlement Date",
       "Transaction Type",
       "Response Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 30 contains the Transaction Processing Fee Amount, representing fees charged for processing the transaction. Used for fee calculation and reporting. Settlement Date is DE 15, Transaction Type is in DE 3, Response Code is DE 39.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 31 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 31 in ISO 8583 represent?",
+    options: [
       "Settlement Processing Fee Amount",
       "Transaction Amount",
       "Merchant Category Code",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 31 contains the Settlement Processing Fee Amount, representing fees charged during settlement processing. Used for fee tracking and reconciliation. Transaction Amount is DE 4, MCC is DE 18, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 32 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 32 in ISO 8583 represent?",
+    options: [
       "Acquiring Institution Identification Code",
       "Transaction Type",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 32 contains the Acquiring Institution Identification Code (LLVAR), identifying the acquiring bank or financial institution processing the transaction. Essential for routing and settlement. Transaction Type is in DE 3, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 33 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 33 in ISO 8583 represent?",
+    options: [
       "Forwarding Institution Identification Code",
       "Card Expiry Date",
       "Processing Code",
       "Transaction Currency Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 33 contains the Forwarding Institution Identification Code (LLVAR), identifying the institution forwarding the transaction (typically the issuer or an intermediary). Used for transaction routing. Card Expiry is DE 14, Processing Code is DE 3, Currency Code is DE 49.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 34 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 34 in ISO 8583 represent?",
+    options: [
       "Extended Primary Account Number",
       "Transaction Type",
       "Point of Service Entry Mode",
       "Response Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 34 contains the Extended Primary Account Number (LLVAR), used when the PAN exceeds the standard length or when additional account information is needed. Less commonly used than DE 2 (standard PAN). Transaction Type is in DE 3, Entry Mode is DE 22, Response Code is DE 39.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 35 in ISO 8583 represent?",
@@ -742,34 +766,43 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 36 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 36 in ISO 8583 represent?",
+    options: [
       "Track 3 Data",
       "Processing Code",
       "Point of Service Condition Code",
       "Transaction Type"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 4,
+    explanation: "Data Element 36 contains Track 3 Data in LLLVAR format. Track 3 is less commonly used than Track 1 and Track 2, and contains additional card data including PIN verification data and other discretionary information. Not all cards have Track 3 data. Processing Code is DE 3, POS Condition Code is DE 25, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 37 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 37 in ISO 8583 represent?",
+    options: [
       "Retrieval Reference Number (RRN)",
       "Transaction Currency Code",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 37 contains the Retrieval Reference Number (RRN), a 12-character alphanumeric reference number assigned by the acquirer. Used for transaction retrieval, chargebacks, and dispute resolution. This number appears on receipts and is used to trace transactions. Currency Code is DE 49, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 38 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 38 in ISO 8583 represent?",
+    options: [
       "Authorization Identification Response Code",
       "Transaction Type",
       "Merchant Name",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 38 contains the Authorization Identification Response Code (AUTH ID), a 6-character code returned by the issuer to identify the authorization. Used for transaction matching and retrieval. This is different from the RRN (DE 37) - AUTH ID is issuer-assigned, RRN is acquirer-assigned. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 39 in ISO 8583 represent?",
@@ -785,14 +818,17 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 40 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 40 in ISO 8583 represent?",
+    options: [
       "Service Restriction Code",
       "Merchant Category Code",
       "Processing Code",
       "Transaction Currency Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 40 contains the Service Restriction Code, indicating restrictions or limitations on the card or account (e.g., restrictions on certain transaction types, geographic restrictions). Used for fraud prevention and risk management. MCC is DE 18, Processing Code is DE 3, Currency Code is DE 49.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 41 in ISO 8583 represent?",
@@ -808,34 +844,43 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 42 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 42 in ISO 8583 represent?",
+    options: [
       "Card Acceptor Identification Code",
       "Transaction Amount",
       "Point of Service Entry Mode",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 42 contains the Card Acceptor Identification Code (CAID/MID), a 15-character code identifying the merchant or card acceptor. This is the merchant ID used for settlement and reporting. Essential for merchant identification and transaction routing. Transaction Amount is DE 4, Entry Mode is DE 22, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 43 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 43 in ISO 8583 represent?",
+    options: [
       "Card Acceptor Name and Location",
       "Processing Code",
       "Response Code",
       "Transaction Time"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 43 contains the Card Acceptor Name and Location (LLVAR), providing the merchant name and address. Format typically includes merchant name, city, state, and country. Used for transaction records and cardholder statements. Processing Code is DE 3, Response Code is DE 39, Transaction Time is DE 12.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 44 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 44 in ISO 8583 represent?",
+    options: [
       "Additional Response Data",
       "Transaction Type",
       "Merchant Category Code",
       "Settlement Date"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 44 contains Additional Response Data (LLVAR), providing supplementary information about the transaction response. May include additional decline reasons, risk scores, or other response-related data. Used for enhanced transaction information. Transaction Type is in DE 3, MCC is DE 18, Settlement Date is DE 15.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 45 in ISO 8583 represent?",
@@ -851,24 +896,30 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 46 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 46 in ISO 8583 represent?",
+    options: [
       "Additional Data (ISO)",
       "Transaction Amount",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 46 contains Additional Data reserved for ISO Use (LLLVAR), allowing ISO-defined additional data to be included in messages. Used for ISO-standardized extensions to the message format. Transaction Amount is DE 4, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 47 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 47 in ISO 8583 represent?",
+    options: [
       "Additional Data (National)",
       "Transaction Type",
       "Merchant Name",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 47 contains Additional Data reserved for National Use (LLLVAR), allowing countries to define usage for local payment network requirements. Used for country-specific payment data. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 48 in ISO 8583 represent?",
@@ -897,25 +948,31 @@ export const questions: Question[] = [
     category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 50 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 50 in ISO 8583 represent?",
+    options: [
       "Settlement Currency Code",
       "Point of Service Entry Mode",
       "Response Code",
       "Transaction Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 50 contains the Settlement Currency Code, a 3-digit ISO 4217 code indicating the currency used for settlement between acquirer and issuer. This may differ from the transaction currency (DE 49) in cross-border transactions. Entry Mode is DE 22, Response Code is DE 39, Transaction Amount is DE 4.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 51 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 51 in ISO 8583 represent?",
+    options: [
       "Cardholder Billing Currency Code",
       "Transaction Type",
       "Settlement Amount",
       "Processing Code"
     ],
-    "correctAnswer": 0
-    },
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 51 contains the Cardholder Billing Currency Code, a 3-digit ISO 4217 code indicating the currency in which the cardholder will be billed. Used for international transactions where billing currency differs from transaction currency. Transaction Type is in DE 3, Settlement Amount is in DE 5, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
    {
     question: "What does Data Element 52 in ISO 8583 represent?",
     options: [
@@ -929,25 +986,31 @@ export const questions: Question[] = [
     explanation: "Data Element 52 contains PIN Data, which is the encrypted PIN block (typically 8 bytes, 16 hex characters). The PIN is encrypted using a PIN encryption key (PEK) and formatted according to ISO 9564. The PIN is NEVER stored on the card - it's stored securely by the issuer bank. The PIN block is created by the terminal/HSM and sent encrypted to the issuer for verification. Transaction Type is in DE 3, Processing Code is DE 3, Settlement Amount is in DE 5.",
     category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 53 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 53 in ISO 8583 represent?",
+    options: [
       "Security Related Control Information",
-      "Transaction Amount",
-      "Merchant Category Code",
-      "Card Expiry Date"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 53 contains Security Related Control Information, used for security-related data and control information in ISO 8583 messages. Used for security protocols and authentication mechanisms. Transaction Amount is DE 4, MCC is DE 18, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 54 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 54 in ISO 8583 represent?",
+    options: [
       "Additional Amounts",
       "Processing Code",
       "Response Code",
-      "PAN Sequence Number"
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 54 contains Additional Amounts (LLLVAR), used when multiple amounts need to be included in a transaction (e.g., tip, surcharge, cashback). Format allows multiple amount entries. Processing Code is DE 3, Response Code is DE 39, PAN Sequence Number is DE 20.",
+    category: "ISO 8583"
   },
   {
     question: "What does Data Element 55 in ISO 8583 represent?",
@@ -962,735 +1025,954 @@ export const questions: Question[] = [
     explanation: "Data Element 55 contains EMV Chip Data in LLLVAR format (TLV - Tag Length Value). This includes critical EMV data like: Application Cryptogram (ARQC/ARPC), Card Verification Results (CVR), Application Transaction Counter (ATC), and other EMV tags. The ARQC (Application Request Cryptogram) is generated by the chip and validated by the issuer. This field is essential for EMV chip card transactions. Transaction Type is in DE 3, Merchant ID is DE 42, Currency Code is DE 49.",
     category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 56 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 56 in ISO 8583 represent?",
+    options: [
       "Reserved for ISO Use",
-      "Settlement Date",
-      "Transaction Type",
-      "Response Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 57 in ISO 8583 represent?",
-    "options": [
-      "Reserved for National Use",
-      "Transaction Amount",
-      "Merchant Category Code",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 58 in ISO 8583 represent?",
-    "options": [
-      "Reserved for Private Use",
-      "Transaction Type",
+      "Processing Code",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 56 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used in most implementations. Settlement Date is DE 15, Transaction Type is in DE 3, Response Code is DE 39.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 59 in ISO 8583 represent?",
-    "options": [
-      "National POS Geographical Data",
-      "Transaction Type",
-      "Card Expiry Date",
-      "Processing Code"
+    {
+    question: "What does Data Element 57 in ISO 8583 represent?",
+    options: [
+      "Reserved for National Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 57 is Reserved for National Use, allowing countries to define usage for local payment network requirements. Used for country-specific payment data. Transaction Amount is DE 4, MCC is DE 18, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 60 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 58 in ISO 8583 represent?",
+    options: [
+      "Reserved for Private Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 58 is Reserved for Private Use, allowing card networks or financial institutions to include proprietary data. Used for network-specific or institution-specific information. Transaction Type is in DE 3, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 59 in ISO 8583 represent?",
+    options: [
+      "National POS Geographical Data",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 59 contains National POS Geographical Data (LLLVAR), providing geographical information about the point of sale location. Used for location-based fraud detection and reporting. Transaction Type is in DE 3, Card Expiry is DE 14, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 60 in ISO 8583 represent?",
+    options: [
       "Additional POS Information",
       "Processing Code",
       "Response Code",
-      "Settlement Date"
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 60 contains Additional POS Information (LLLVAR), providing supplementary point-of-sale data. May include terminal capabilities, merchant data, or other POS-related information. Processing Code is DE 3, Response Code is DE 39, Settlement Date is DE 15.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 61 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 61 in ISO 8583 represent?",
+    options: [
       "Transaction Reference Data",
-      "Transaction Amount",
-      "Merchant Category Code",
-      "Point of Service Entry Mode"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 61 contains Transaction Reference Data (LLLVAR), providing reference information for the transaction. Used for transaction tracking and retrieval. Transaction Amount is DE 4, MCC is DE 18, Entry Mode is DE 22.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 62 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 62 in ISO 8583 represent?",
+    options: [
       "Additional Transaction Data",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 62 contains Additional Transaction Data (LLLVAR), providing supplementary transaction information. Used for extended transaction data beyond standard fields. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 63 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 63 in ISO 8583 represent?",
+    options: [
       "Reserved for Private Use",
-      "Transaction Time",
-      "Settlement Amount",
-      "Card Expiry Date"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 63 is Reserved for Private Use, allowing card networks or financial institutions to include proprietary data. Used for network-specific or institution-specific information. Transaction Time is DE 12, Settlement Amount is in DE 5, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 64 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 64 in ISO 8583 represent?",
+    options: [
       "Message Authentication Code (MAC)",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 65 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Point of Service Entry Mode",
       "Response Code",
-      "Transaction Amount"
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 64 contains the Message Authentication Code (MAC), used to verify message integrity and authenticity. The MAC is calculated using cryptographic keys and message data, ensuring the message hasn't been tampered with during transmission. This is critical for security. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 66 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 65 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 65 is Reserved for ISO Use, reserved by the ISO 8583 standard for future use. Currently not commonly implemented. Entry Mode is DE 22, Response Code is DE 39, Transaction Amount is DE 4.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 66 in ISO 8583 represent?",
+    options: [
       "Settlement Code",
-      "Transaction Type",
-      "Settlement Amount",
-      "Processing Code"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 66 contains the Settlement Code, indicating settlement-related information or codes. Used for settlement processing and reconciliation. Transaction Type is in DE 3, Settlement Amount is in DE 5, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 67 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 67 in ISO 8583 represent?",
+    options: [
       "Extended Payment Code",
-      "Transaction Currency Code",
-      "Merchant Category Code",
-      "Settlement Date"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 67 contains the Extended Payment Code, used for extended payment information or installment payment data. Used for complex payment scenarios. Currency Code is DE 49, MCC is DE 18, Settlement Date is DE 15.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 68 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 68 in ISO 8583 represent?",
+    options: [
       "Receiving Institution Country Code",
       "Processing Code",
-      "Point of Service Entry Mode",
-      "Response Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 69 in ISO 8583 represent?",
-    "options": [
-      "Settlement Institution Country Code",
-      "Transaction Type",
-      "Merchant Name",
-      "Settlement Amount"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 70 in ISO 8583 represent?",
-    "options": [
-      "Network Management Information Code",
-      "Transaction Amount",
-      "Processing Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 71 in ISO 8583 represent?",
-    "options": [
-      "Message Number",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 68 contains the Receiving Institution Country Code, a 3-digit ISO 3166-1 code indicating the country of the receiving institution. Used for cross-border transaction routing. Processing Code is DE 3, Entry Mode is DE 22, Response Code is DE 39.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 72 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 69 in ISO 8583 represent?",
+    options: [
+      "Settlement Institution Country Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 69 contains the Settlement Institution Country Code, a 3-digit ISO 3166-1 code indicating the country of the settlement institution. Used for settlement routing in cross-border transactions. Transaction Type is in DE 3, Merchant Name is DE 43, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 70 in ISO 8583 represent?",
+    options: [
+      "Network Management Information Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 70 contains the Network Management Information Code, used for network management messages and system administration. Used for network control and maintenance operations. Transaction Amount is DE 4, Processing Code is DE 3, Transaction Type is in DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 71 in ISO 8583 represent?",
+    options: [
+      "Message Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 71 contains the Message Number, used for message sequencing and tracking in network management operations. Used for message ordering and duplicate detection. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 72 in ISO 8583 represent?",
+    options: [
       "Data Record",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 72 contains Data Record (LLLVAR), used for storing record data or file information. Used for batch processing and file transfers. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 73 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 73 in ISO 8583 represent?",
+    options: [
       "Date, Action",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 73 contains Date and Action information, used for date-related actions or operations. Used for time-sensitive operations and scheduling. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 74 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 74 in ISO 8583 represent?",
+    options: [
       "Credits, Number",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 75 in ISO 8583 represent?",
-    "options": [
-      "Credits, Reversal Number",
-      "Point of Service Entry Mode",
       "Response Code",
-      "Transaction Amount"
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 74 contains the number of credit transactions, used for batch processing and settlement reporting. Used for transaction counting and reconciliation. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 76 in ISO 8583 represent?",
-    "options": [
-      "Debits, Number",
-      "Transaction Type",
-      "Settlement Amount",
-      "Processing Code"
+    {
+    question: "What does Data Element 75 in ISO 8583 represent?",
+    options: [
+      "Credits, Reversal Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
-    },
-   {
-    "question": "What does Data Element 77 in ISO 8583 represent?",
-    "options": [
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 75 contains the number of credit reversal transactions, used for batch processing and settlement reporting. Used for reversal tracking and reconciliation. Entry Mode is DE 22, Response Code is DE 39, Transaction Amount is DE 4.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 76 in ISO 8583 represent?",
+    options: [
+      "Debits, Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 76 contains the number of debit transactions, used for batch processing and settlement reporting. Used for transaction counting and reconciliation. Transaction Type is in DE 3, Settlement Amount is in DE 5, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+     {
+    question: "What does Data Element 77 in ISO 8583 represent?",
+    options: [
       "Debits, Reversal Number",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 77 contains the number of debit reversal transactions, used for batch processing and settlement reporting. Used for reversal tracking and reconciliation. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 78 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 78 in ISO 8583 represent?",
+    options: [
       "Transfer, Number",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 79 in ISO 8583 represent?",
-    "options": [
-      "Transfer, Reversal Number",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 80 in ISO 8583 represent?",
-    "options": [
-      "Reversal, Number",
-      "Point of Service Entry Mode",
-      "Response Code",
-      "Settlement Amount"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 81 in ISO 8583 represent?",
-    "options": [
-      "Authorizations, Number",
-      "Transaction Type",
       "Processing Code",
-      "Transaction Currency Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 82 in ISO 8583 represent?",
-    "options": [
-      "Credits, Processing Fee Amount",
-      "Settlement Amount",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 83 in ISO 8583 represent?",
-    "options": [
-      "Credits, Transaction Fee Amount",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 84 in ISO 8583 represent?",
-    "options": [
-      "Debits, Processing Fee Amount",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 78 contains the number of transfer transactions, used for batch processing and settlement reporting. Used for transaction counting and reconciliation. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 85 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 79 in ISO 8583 represent?",
+    options: [
+      "Transfer, Reversal Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 79 contains the number of transfer reversal transactions, used for batch processing and settlement reporting. Used for reversal tracking and reconciliation. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 80 in ISO 8583 represent?",
+    options: [
+      "Reversal, Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 80 contains the number of reversal transactions, used for batch processing and settlement reporting. Used for reversal tracking and reconciliation. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 81 in ISO 8583 represent?",
+    options: [
+      "Authorizations, Number",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 81 contains the number of authorization transactions, used for batch processing and settlement reporting. Used for authorization counting and reconciliation. Transaction Type is in DE 3, Processing Code is DE 3, Currency Code is DE 49.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 82 in ISO 8583 represent?",
+    options: [
+      "Credits, Processing Fee Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 82 contains the Credits Processing Fee Amount, representing fees charged for processing credit transactions. Used for fee calculation and reporting. Settlement Amount is in DE 5, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 83 in ISO 8583 represent?",
+    options: [
+      "Credits, Transaction Fee Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 83 contains the Credits Transaction Fee Amount, representing fees charged for credit transactions. Used for fee tracking and reporting. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 84 in ISO 8583 represent?",
+    options: [
+      "Debits, Processing Fee Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 84 contains the Debits Processing Fee Amount, representing fees charged for processing debit transactions. Used for fee calculation and reporting. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 85 in ISO 8583 represent?",
+    options: [
       "Debits, Transaction Fee Amount",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 86 in ISO 8583 represent?",
-    "options": [
-      "Credits, Amount",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 87 in ISO 8583 represent?",
-    "options": [
-      "Credits, Reversal Amount",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 88 in ISO 8583 represent?",
-    "options": [
-      "Debits, Amount",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 85 contains the Debits Transaction Fee Amount, representing fees charged for debit transactions. Used for fee tracking and reporting. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 89 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 86 in ISO 8583 represent?",
+    options: [
+      "Credits, Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 86 contains the Credits Amount, representing the total amount of credit transactions. Used for batch processing and settlement reporting. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 87 in ISO 8583 represent?",
+    options: [
+      "Credits, Reversal Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 87 contains the Credits Reversal Amount, representing the total amount of credit reversals. Used for batch processing and settlement reporting. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 88 in ISO 8583 represent?",
+    options: [
+      "Debits, Amount",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 88 contains the Debits Amount, representing the total amount of debit transactions. Used for batch processing and settlement reporting. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 89 in ISO 8583 represent?",
+    options: [
       "Debits, Reversal Amount",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 90 in ISO 8583 represent?",
-    "options": [
-      "Original Data Elements",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 91 in ISO 8583 represent?",
-    "options": [
-      "File Update Code",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 92 in ISO 8583 represent?",
-    "options": [
-      "File Security Code",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 89 contains the Debits Reversal Amount, representing the total amount of debit reversals. Used for batch processing and settlement reporting. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 93 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 90 in ISO 8583 represent?",
+    options: [
+      "Original Data Elements",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 90 contains Original Data Elements (LLLVAR), used in reversals to include data from the original transaction. Essential for reversal processing to identify the original transaction. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 91 in ISO 8583 represent?",
+    options: [
+      "File Update Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 91 contains the File Update Code, used for file update operations and data synchronization. Used for batch file processing and updates. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 92 in ISO 8583 represent?",
+    options: [
+      "File Security Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 92 contains the File Security Code, used for file security and integrity verification. Used for secure file transfers and updates. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 93 in ISO 8583 represent?",
+    options: [
       "Response Indicator",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 94 in ISO 8583 represent?",
-    "options": [
-      "Service Indicator",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 95 in ISO 8583 represent?",
-    "options": [
-      "Replacement Amounts",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 96 in ISO 8583 represent?",
-    "options": [
-      "Message Security Code",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 93 contains the Response Indicator, providing additional response information or indicators. Used for enhanced response data. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 97 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 94 in ISO 8583 represent?",
+    options: [
+      "Service Indicator",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 94 contains the Service Indicator, indicating service-related information or capabilities. Used for service identification and routing. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 95 in ISO 8583 represent?",
+    options: [
+      "Replacement Amounts",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 95 contains Replacement Amounts (LLLVAR), used when amounts need to be replaced or corrected. Used for amount corrections and adjustments. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 96 in ISO 8583 represent?",
+    options: [
+      "Message Security Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 96 contains the Message Security Code, used for message-level security and integrity verification. Used for secure message transmission. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 97 in ISO 8583 represent?",
+    options: [
       "Net Settlement Amount",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 98 in ISO 8583 represent?",
-    "options": [
-      "Payee",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 99 in ISO 8583 represent?",
-    "options": [
-      "Settlement Institution Identification Code",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 100 in ISO 8583 represent?",
-    "options": [
-      "Receiving Institution Identification Code",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 97 contains the Net Settlement Amount, representing the net amount after all credits and debits. Used for final settlement calculation. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 101 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 98 in ISO 8583 represent?",
+    options: [
+      "Payee",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 98 contains Payee information (LLVAR), identifying the payee in a transaction. Used for payment routing and identification. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 99 in ISO 8583 represent?",
+    options: [
+      "Settlement Institution Identification Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 99 contains the Settlement Institution Identification Code (LLVAR), identifying the institution handling settlement. Used for settlement routing and identification. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 100 in ISO 8583 represent?",
+    options: [
+      "Receiving Institution Identification Code",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 100 contains the Receiving Institution Identification Code (LLVAR), identifying the institution receiving the transaction. Used for transaction routing and identification. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 101 in ISO 8583 represent?",
+    options: [
       "File Name",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
-    ],
-    "correctAnswer": 0
-    },
-   {
-    "question": "What does Data Element 102 in ISO 8583 represent?",
-    "options": [
-      "Account Identification 1",
-      "Transaction Type",
-      "Merchant ID",
-      "Transaction Amount"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 103 in ISO 8583 represent?",
-    "options": [
-      "Account Identification 2",
-      "Settlement Date",
-      "Response Code",
-      "Transaction Currency Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 104 in ISO 8583 represent?",
-    "options": [
-      "Transaction Description",
-      "Processing Code",
-      "Merchant Category Code",
-      "Card Expiry Date"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 105 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Point of Service Entry Mode",
-      "Settlement Amount",
-      "Transaction Fee Amount"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 106 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 107 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Point of Service Condition Code",
-      "Response Code",
-      "Reversal Amount"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 108 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Transaction Currency Code",
-      "Processing Code",
-      "Cardholder Verification Method"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 109 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Settlement Date",
-      "Transaction Fee Amount",
-      "Issuer Country Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 110 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What does Data Element 111 in ISO 8583 represent?",
-    "options": [
-      "Reserved for ISO Use",
-      "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 101 contains the File Name (LLVAR), used for file identification in batch processing. Used for file operations and batch processing. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 112 in ISO 8583 represent?",
-    "options": [
+     {
+    question: "What does Data Element 102 in ISO 8583 represent?",
+    options: [
+      "Account Identification 1",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 102 contains Account Identification 1 (LLVAR), providing primary account identification. Used for account identification and routing. Transaction Type is in DE 3, Merchant ID is DE 42, Transaction Amount is DE 4.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 103 in ISO 8583 represent?",
+    options: [
+      "Account Identification 2",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 103 contains Account Identification 2 (LLVAR), providing secondary account identification. Used for additional account identification. Settlement Date is DE 15, Response Code is DE 39, Currency Code is DE 49.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 104 in ISO 8583 represent?",
+    options: [
+      "Transaction Description",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 104 contains Transaction Description (LLVAR), providing a description of the transaction. Used for transaction documentation and reporting. Processing Code is DE 3, MCC is DE 18, Card Expiry is DE 14.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 105 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 105 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Entry Mode is DE 22, Settlement Amount is in DE 5, Transaction Fee Amount is in DE 28-31.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 106 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 106 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 107 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 107 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. POS Condition Code is DE 25, Response Code is DE 39, Reversal Amount is in DE 4.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 108 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 108 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Currency Code is DE 49, Processing Code is DE 3, Cardholder Verification Method is in DE 22.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 109 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 109 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Settlement Date is DE 15, Transaction Fee Amount is in DE 28-31, Issuer Country Code is DE 21.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 110 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 110 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 111 in ISO 8583 represent?",
+    options: [
+      "Reserved for ISO Use",
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
+    ],
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 111 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Currently not commonly used. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
+  },
+    {
+    question: "What does Data Element 112 in ISO 8583 represent?",
+    options: [
       "Additional Data - National",
       "Processing Code",
-      "Merchant Category Code",
-      "Transaction Type"
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 112 contains Additional Data reserved for National Use (LLLVAR), allowing countries to define usage for local payment network requirements. Used for country-specific payment data. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 113 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 113 in ISO 8583 represent?",
+    options: [
       "Additional Data - Private",
-      "Settlement Date",
-      "Transaction Amount",
-      "Card Expiry Date"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 113 contains Additional Data reserved for Private Use (LLLVAR), allowing card networks or financial institutions to include proprietary data. Used for network-specific or institution-specific information. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
-  {
-    "question": "What does Data Element 114 in ISO 8583 represent?",
-    "options": [
+    {
+    question: "What does Data Element 114 in ISO 8583 represent?",
+    options: [
       "Additional Data - ISO Use",
-      "Transaction Type",
-      "Merchant Name",
-      "Processing Code"
+      "Processing Code",
+      "Response Code",
+      "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 114 contains Additional Data reserved for ISO Use (LLLVAR), allowing ISO-defined additional data to be included in messages. Used for ISO-standardized extensions. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 115 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 115 in ISO 8583 represent?",
+    options: [
       "Additional Data - National Use",
       "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 115 contains Additional Data reserved for National Use, allowing country-specific or network-specific data to be included in ISO 8583 messages. This field is typically used for local payment network requirements. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 116 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 116 in ISO 8583 represent?",
+    options: [
       "Additional Data - Private Use",
       "Processing Code",
       "Merchant Category Code",
       "Transaction Type"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 116 contains Additional Data reserved for Private Use, allowing card networks or financial institutions to include proprietary data. This is similar to DE 48 but for different purposes. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 117 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 117 in ISO 8583 represent?",
+    options: [
       "Reserved for ISO Use",
       "Settlement Date",
       "Transaction Amount",
       "Card Expiry Date"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 117 is Reserved for ISO Use, meaning it's reserved by the ISO 8583 standard for future use or standardization. Currently not commonly used in most implementations. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 118 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 118 in ISO 8583 represent?",
+    options: [
       "Reserved for National Use",
       "Transaction Type",
       "Merchant Name",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 118 is Reserved for National Use, allowing countries or regions to define their own usage for this field. Used for country-specific payment requirements. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 119 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 119 in ISO 8583 represent?",
+    options: [
       "Reserved for Private Use",
       "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 119 is Reserved for Private Use, allowing card networks or financial institutions to define proprietary usage. Used for network-specific or institution-specific data. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 120 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 120 in ISO 8583 represent?",
+    options: [
       "Reserved for ISO Use",
       "Processing Code",
       "Merchant Category Code",
       "Transaction Type"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 120 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Not commonly used in current implementations. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 121 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 121 in ISO 8583 represent?",
+    options: [
       "Reserved for National Use",
       "Settlement Date",
       "Transaction Amount",
       "Card Expiry Date"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 121 is Reserved for National Use, allowing countries to define their own usage. Used for country-specific payment network requirements. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 122 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 122 in ISO 8583 represent?",
+    options: [
       "Reserved for Private Use",
       "Transaction Type",
       "Merchant Name",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 122 is Reserved for Private Use, allowing card networks or financial institutions to include proprietary data. Used for network-specific or institution-specific information. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 123 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 123 in ISO 8583 represent?",
+    options: [
       "Reserved for ISO Use",
       "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 123 is Reserved for ISO Use, reserved by the ISO 8583 standard for future use. Currently not commonly implemented. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 124 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 124 in ISO 8583 represent?",
+    options: [
       "Reserved for National Use",
       "Processing Code",
       "Merchant Category Code",
       "Transaction Type"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 124 is Reserved for National Use, allowing countries to define usage for local payment requirements. Used for country-specific payment network data. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 125 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 125 in ISO 8583 represent?",
+    options: [
       "Reserved for Private Use",
       "Settlement Date",
       "Transaction Amount",
       "Card Expiry Date"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 125 is Reserved for Private Use, allowing card networks or financial institutions to include proprietary data. Used for network-specific or institution-specific information. Settlement Date is DE 15, Transaction Amount is DE 4, Card Expiry is DE 14.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 126 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 126 in ISO 8583 represent?",
+    options: [
       "Reserved for ISO Use",
       "Transaction Type",
       "Merchant Name",
       "Processing Code"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 126 is Reserved for ISO Use, reserved by the ISO 8583 standard for future standardization. Not commonly used in current implementations. Transaction Type is in DE 3, Merchant Name is DE 43, Processing Code is DE 3.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 127 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 127 in ISO 8583 represent?",
+    options: [
       "Reserved for National Use",
       "Point of Service Entry Mode",
       "Response Code",
       "Settlement Amount"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 3,
+    explanation: "Data Element 127 is Reserved for National Use, allowing countries to define usage for local payment network requirements. Used for country-specific data. Entry Mode is DE 22, Response Code is DE 39, Settlement Amount is in DE 5.",
+    category: "ISO 8583"
   },
   {
-    "question": "What does Data Element 128 in ISO 8583 represent?",
-    "options": [
+    question: "What does Data Element 128 in ISO 8583 represent?",
+    options: [
       "Message Authentication Code (MAC)",
       "Processing Code",
       "Merchant Category Code",
       "Transaction Type"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 4,
+    explanation: "Data Element 128 contains the Message Authentication Code (MAC), used to verify message integrity and authenticity. The MAC is calculated using cryptographic keys and message data, ensuring the message hasn't been tampered with during transmission. This is critical for security. Processing Code is DE 3, MCC is DE 18, Transaction Type is in DE 3.",
+    category: "ISO 8583"
     },
     {
     question: "What is the ASCII code for the letter 'A'?",
@@ -1954,46 +2236,58 @@ export const questions: Question[] = [
     category: "Technology"
   },
 
-  // Outros Conceitos de Pagamento
+  // ========== NÍVEL 1 - OUTROS CONCEITOS ==========
   {
-    "question": "What is an Acquirer in the payments ecosystem?",
-    "options": [
+    question: "What is an Acquirer in the payments ecosystem?",
+    options: [
       "A bank or financial institution that processes payments for merchants",
       "A company that issues credit cards",
       "A consumer using a debit or credit card",
       "A fraud detection system"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 1,
+    explanation: "An Acquirer (acquiring bank) is a financial institution that processes card transactions on behalf of merchants. They receive transaction requests from merchants, route them through payment networks to issuers, handle authorization responses, and settle funds to merchant accounts. Issuers issue cards to consumers, not acquirers. Consumers use cards but aren't acquirers. Fraud detection systems are tools used by acquirers/issuers, not acquirers themselves.",
+    category: "Fundamentals"
   },
   {
-    "question": "What is a Payment Gateway?",
-    "options": [
+    question: "What is a Payment Gateway?",
+    options: [
       "A service that securely transmits transaction data from a merchant to the acquiring bank",
       "A method of encrypting credit card data",
       "A digital wallet provider",
       "A type of chip in a credit card"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 1,
+    explanation: "A Payment Gateway is a service that securely transmits transaction data from merchants to acquiring banks and payment networks. It encrypts data, formats it according to standards (like ISO 8583), and handles the communication between merchants and payment processors. Encryption is a method, not a gateway. Digital wallets are separate services. Chip cards contain EMV chips, not gateways.",
+    category: "Fundamentals"
   },
   {
-    "question": "What is Strong Customer Authentication (SCA)?",
-    "options": [
+    question: "What is Strong Customer Authentication (SCA)?",
+    options: [
       "A multi-factor authentication method required in payment transactions",
       "A type of card encryption",
       "A new debit card technology",
       "A fraud detection algorithm"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 1,
+    explanation: "Strong Customer Authentication (SCA) requires two or more independent authentication factors: something you know (password/PIN), something you have (card/phone), or something you are (biometric). This is mandated by regulations like PSD2 in Europe to reduce fraud. It's not encryption (that's data protection), not a card technology (that's EMV), and not a fraud algorithm (that's detection, not authentication).",
+    category: "Security"
   },
   {
-    "question": "Which regulation enforces Strong Customer Authentication in Europe?",
-    "options": [
+    question: "Which regulation enforces Strong Customer Authentication in Europe?",
+    options: [
       "PSD2",
       "PCI DSS",
       "ISO 8583",
       "SOX"
     ],
-    "correctAnswer": 0
+    correctAnswer: 0,
+    level: 1,
+    explanation: "PSD2 (Payment Services Directive 2) is the European regulation that mandates Strong Customer Authentication for electronic payments. It requires multi-factor authentication for most online and card transactions. PCI DSS is about data security, not authentication requirements. ISO 8583 is a message format standard, not a regulation. SOX (Sarbanes-Oxley) is US financial reporting regulation, not payment authentication.",
+    category: "Security"
     },
    {
     question: "Which character encoding does TecBan use for its transactions?",
