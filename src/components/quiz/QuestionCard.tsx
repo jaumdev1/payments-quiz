@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import AnswerOptions from "./AnswerOptions";
-import { Button } from "../nano/Button";
 
 interface QuestionCardProps {
   question: {
@@ -29,7 +28,7 @@ export default function QuestionCard({
   const handleSubmit = () => {
     if (selectedAnswer !== null) {
       onAnswerSubmit(selectedAnswer);
-      setSelectedAnswer(null); // Reseta o estado para a próxima pergunta
+      setSelectedAnswer(null); // Reset state for next question
     }
   };
 
@@ -37,36 +36,56 @@ export default function QuestionCard({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="p-6 border rounded-lg shadow-md bg-gray-800"
+      transition={{ duration: 0.4 }}
+      className="relative bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 p-6 sm:p-8"
     >
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-bold text-yellow-400">
-          Question {questionNumber} / {totalQuestions}
-        </h2>
+      {/* Progress bar */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-semibold text-yellow-400">
+            Question {questionNumber} of {totalQuestions}
+          </span>
+          <span className="text-sm text-gray-400">
+            {Math.round((questionNumber / totalQuestions) * 100)}%
+          </span>
+        </div>
+        <div className="w-full h-2 bg-gray-700/50 rounded-full overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
+            transition={{ duration: 0.3 }}
+            className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full"
+          />
+        </div>
       </div>
-      <p className="mb-6 text-gray-100 text-base font-medium tracking-wide">
-        {question.question}
-      </p>
 
+      {/* Question */}
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-100 mb-6 sm:mb-8 leading-relaxed">
+        {question.question}
+      </h2>
+
+      {/* Answer options */}
       <AnswerOptions
         options={question.options}
         selectedAnswer={selectedAnswer}
         onSelect={handleAnswerSelection}
       />
 
-      <div className="flex justify-end mt-8">
-        <Button
+      {/* Submit button */}
+      <div className="flex justify-end mt-6 sm:mt-8">
+        <motion.button
           onClick={handleSubmit}
           disabled={selectedAnswer === null}
-          className={`px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 ${
+          whileHover={selectedAnswer !== null ? { scale: 1.05 } : {}}
+          whileTap={selectedAnswer !== null ? { scale: 0.95 } : {}}
+          className={`px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 ${
             selectedAnswer === null
-              ? "bg-yellow-300 cursor-not-allowed opacity-50"
-              : "bg-yellow-500 hover:bg-yellow-600 hover:shadow-lg transform hover:-translate-y-1"
+              ? "bg-gray-700 cursor-not-allowed opacity-50"
+              : "bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 shadow-lg shadow-yellow-500/50"
           }`}
         >
           {questionNumber === totalQuestions ? "Finish Quiz" : "Next Question"}
-        </Button>
+        </motion.button>
       </div>
     </motion.div>
   );
